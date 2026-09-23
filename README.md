@@ -1,21 +1,23 @@
 # gagehansberry.github.io
 
-Privacy policies and support pages for the apps, served by GitHub Pages.
-**This is the only public repository.** Every app repository stays private;
-nothing here is source code.
+Privacy policies and support pages for my iOS apps, published with GitHub Pages
+at [gagehansberry.github.io](https://gagehansberry.github.io).
+
+## Apps
+
+| App | Privacy policy | Support |
+| --- | --- | --- |
+| Cream | [cream/privacy](https://gagehansberry.github.io/cream/privacy/) | [cream/support](https://gagehansberry.github.io/cream/support/) |
+
+## Structure
 
 ```
-index.html              the list of apps
-style.css               shared, light and dark
-<app>/privacy/          one policy per app, written from that app's own data flows
-<app>/support/          one support page per app
+index.html            list of apps
+style.css             shared styles (light and dark)
+<app>/privacy/        the app's privacy policy
+<app>/support/        the app's support page
 ```
 
-Each app gets its own policy, because the apps differ in what (if anything)
-leaves the device — a shared "we collect nothing" page would be false for some
-of them. When an app's data handling changes, its policy changes in the same
-release, and its effective date moves.
-
-The app links here (e.g. Cream → Settings → About → Privacy Policy). If a custom
-domain is ever pointed at this site, GitHub redirects these `github.io`
-addresses to it, so links already built into apps keep working.
+Each app has its own privacy policy describing that app's data handling. When
+an app's data handling changes, its policy is updated before that version is
+released, and the effective date at the top of the policy changes with it.
