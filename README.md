@@ -8,6 +8,7 @@ at [gagehansberry.github.io](https://gagehansberry.github.io).
 | App | Privacy policy | Support |
 | --- | --- | --- |
 | Cream | [cream/privacy](https://gagehansberry.github.io/cream/privacy/) | [cream/support](https://gagehansberry.github.io/cream/support/) |
+| Telly | [tv-remote/privacy](https://gagehansberry.github.io/tv-remote/privacy/) | [tv-remote/support](https://gagehansberry.github.io/tv-remote/support/) |
 
 ## Structure
 
@@ -17,6 +18,10 @@ style.css             shared styles (light and dark)
 <app>/privacy/        the app's privacy policy
 <app>/support/        the app's support page
 ```
+
+A folder is named for what the app does, not its display name, when the name
+may still change: `tv-remote/` is Telly's. Apps link to these URLs from inside
+the build, so a folder is never renamed once a build points at it.
 
 Each app has its own privacy policy describing that app's data handling. When
 an app's data handling changes, its policy is updated before that version is
