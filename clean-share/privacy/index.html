@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy for Sanitize</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+<h1>Privacy Policy for Sanitize</h1>
+<p class="meta">Effective October 4, 2026</p>
+
+<p>Sanitize removes tracking parameters from links, and location and other hidden details from photos. It does this on your device.</p>
+
+<p><strong>Sanitize collects no data.</strong> There is no account, no analytics, and no server operated by the developer. Nothing you put into the app is sent to the developer, ever.</p>
+
+<p><strong>The app uses the network in exactly one situation: when you tap "Look up where this goes" on a short link.</strong> That request goes from your phone straight to the shortener — bit.ly, t.co, and so on. Everything else the app does, including all link cleaning, happens on your device with no network access at all.</p>
+
+<p>That lookup never happens on its own. It is not automatic, not speculative, and not performed in the background. It happens once, when you ask for it, for the one link you asked about. The section below explains exactly what it sends and why it is your choice to make.</p>
+
+<h2>What Sanitize does not collect</h2>
+
+<p>None of the following is gathered by the app, stored by it, sold, shared, or sent to its developer:</p>
+
+<ul>
+<li>your name, email address, phone number, or any account identifier</li>
+<li>your location</li>
+<li>your contacts, photos, calendar, health data, or files</li>
+<li>device identifiers or advertising identifiers</li>
+<li>analytics, usage statistics, or crash reports</li>
+<li>the links you sanitize</li>
+<li>the photos you clean, or anything about them</li>
+</ul>
+
+<p>There is no account to create, nothing to sign in to, and no server operated by the developer of this app. The App Store privacy label for Sanitize is <strong>Data Not Collected</strong>.</p>
+
+<p>One precision, so the list above isn't read as promising more than it does: if you tap to look up a short link, that request reveals your IP address <strong>to the shortener</strong>, the way visiting any website does. It is not collected by Sanitize and the developer never sees it. See "Looking up where a short link goes" below.</p>
+
+<h2>Links you sanitize</h2>
+
+<p>When you share a link to Sanitize, use its Shortcuts action, or paste one into the app, that link is read into memory, cleaned, and shown back to you. It is <strong>not</strong> written to disk and never logged.</p>
+
+<p>Three details worth stating plainly, because they are the only places a link goes anywhere at all:</p>
+
+<ul>
+<li><strong>The clipboard.</strong> When you tap to copy, the cleaned link is placed on the system clipboard. That is the point of the app. If you have Handoff and Universal Clipboard enabled, iOS — not Sanitize — may make the clipboard available to your other Apple devices, under Apple's privacy policy.</li>
+<li><strong>Wherever you paste it.</strong> Once the cleaned link leaves the clipboard, what happens to it is governed by whatever app you pasted it into.</li>
+<li><strong>A short link you ask about.</strong> If — and only if — you tap to look up where a short link goes, that one link is sent to the shortener that created it. This is the app's only use of the network, and it is described in full below.</li>
+</ul>
+
+<h2>Photos you clean</h2>
+
+<p>You can share photos to Sanitize, or choose them in its Photos tab, to remove the hidden details they carry: where the photo was taken, the camera and lens that took it, when it was taken, and details such as the editing software, author or caption. Sanitize makes a <strong>clean copy</strong>. Your original photo is not changed.</p>
+
+<ul>
+<li><strong>Choosing photos</strong> uses Apple's photo picker, which gives Sanitize only the photos you pick. Sanitize cannot see the rest of your library.</li>
+<li><strong>Cleaning happens on your device.</strong> No photo, and nothing about a photo, is sent anywhere. Sanitize checks the clean copy afterwards, and if a detail could not be removed it tells you rather than offering the photo as clean.</li>
+<li><strong>The clean copy is kept only while you use it.</strong> It is held in the app's temporary storage so you can share or save it, under a plain name such as "Photo 1" rather than the original file name, and it is deleted when you leave the Photos tab or close the share sheet, and whenever the app starts.</li>
+<li><strong>Saving to Photos</strong> is optional. If you tap it, iOS asks whether Sanitize may <em>add</em> photos. That permission lets it add the clean copy as a new photo; it does not let it see your other photos.</li>
+<li><strong>Copying</strong> a clean photo puts it on the clipboard, the same as copying a link (see above).</li>
+</ul>
+
+<h2>Control Center</h2>
+
+<p>Sanitize offers a Control Center button, <strong>Clean Copied Link</strong>. It only opens the app, ready to paste. It does not read your clipboard: the clipboard is read only when you tap Paste in the app.</p>
+
+<h2>Looking up where a short link goes</h2>
+
+<p>A short link like bit.ly/abc hides its destination. The only way to find out where it leads is to ask the service that made it. Sanitize will do that — but only when you tap the button, and only for services it recognises: the list built into the app, plus any short link site you add yourself in Settings → Your rules.</p>
+
+<p>Adding a site there is the only way to change which services the app is willing to contact, it takes effect only for links on that site, and it still never makes a request until you tap. Nothing you share or paste into the app can add one.</p>
+
+<p><strong>Why this is your decision, not the app's.</strong> Asking bit.ly where a link goes <em>is a click on that link</em>. If you were going to open it anyway, having Sanitize ask is better for you: the request carries no cookies, no browser fingerprint, no referrer and no JavaScript, and you end up opening a destination with its tracking parameters already removed. If you were <strong>not</strong> going to open it — you were only cleaning it to pass along — then the lookup creates a click that would never have existed. Only you know which situation you are in, so only you can start it.</p>
+
+<p><strong>What the request contains.</strong> The short link itself, and your IP address, which any connection to any server necessarily reveals. It is made with a fresh, private connection each time: no cookies are sent or stored, no cache is kept, nothing about it is written to your device, and no identifier of you or your device is attached. The shortener will see that some visitor followed the link, as it would have if you had opened it in your browser.</p>
+
+<p><strong>What it will not do.</strong> Only https addresses are followed, never more than five redirects in a row, and never to a link written as an address on your own network or device (such as 192.168.1.1). The destination is cleaned of tracking parameters before you see it, and nothing about the lookup is stored or reported anywhere.</p>
+
+<p><strong>The developer never sees any of this.</strong> The request goes from your phone to the shortener directly. There is no intermediary and no server involved.</p>
+
+<p>If you would rather not make that request at all, don't tap the button — the short link is copied and shared exactly as it arrived, and everything else in the app works with no network access whatsoever.</p>
+
+<h2>Rules you create</h2>
+
+<p>Sanitize ships with a built-in list of tracking parameters and a built-in list of short link services. You may add your own to either, in Settings.</p>
+
+<ul>
+<li><strong>What is stored:</strong> for a parameter rule, the parameter name you typed (for example utm_source) and, if you scoped it to one site, the website address you typed (for example example.com). For a short link site, the website address you typed. Nothing else — never a link you sanitized.</li>
+<li><strong>Where it is stored:</strong> on your device, inside the app's own shared container, so that the share-sheet extension and the Shortcuts action use the same rules as the app. It is never uploaded.</li>
+<li><strong>Backups:</strong> because it is ordinary app data on your device, it is included in your device backups if you back up to iCloud or to a computer. Those backups are covered by Apple's privacy policy, not this one.</li>
+<li><strong>Deleting it:</strong> swipe to delete any rule in Settings → Your rules. Deleting the app removes all of it, immediately and permanently. There is no copy anywhere else.</li>
+</ul>
+
+<p>Rules are the only thing Sanitize stores. Links are never stored, and clean photo copies exist only for as long as described in "Photos you clean".</p>
+
+<h2>No third parties</h2>
+
+<p>Sanitize contains no third-party software development kits, no advertising networks, no analytics services, and no crash-reporting services. Nothing is embedded in the app that reports on you.</p>
+
+<p>The one exception is the one you choose: when you tap to look up a short link, the shortener receives that request, exactly as described above. That is a third party, it is disclosed, and it happens only at your instruction.</p>
+
+<h2>Beta testing through TestFlight</h2>
+
+<p>While Sanitize is distributed as a beta through Apple's TestFlight, <strong>Apple</strong> collects information about your use of the beta — such as installation and crash data, and any feedback or screenshots you choose to submit — and may make that available to the developer. That collection is performed by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, not by this app, and the app itself still collects nothing.</p>
+
+<p>Feedback you deliberately send through TestFlight is the one case where you may send the developer information about yourself. Only send what you mean to send; a screenshot may contain links you did not intend to share.</p>
+
+<h2>Children's privacy</h2>
+
+<p>Sanitize is not directed to children under 13, and it collects no personal information from anyone, of any age.</p>
+
+<h2>Your rights</h2>
+
+<p>Privacy laws including the California Consumer Privacy Act (CCPA/CPRA) and the EU General Data Protection Regulation (GDPR) give you rights to access, correct, delete, or port the personal information a business holds about you, and to know whether it is sold or shared.</p>
+
+<p>The developer of Sanitize holds no personal information about you, so there is nothing to access, correct, export, or delete, and nothing has ever been sold or shared. Your data is on your device, under your control. Deleting the app deletes all of it.</p>
+
+<h2>Changes to this policy</h2>
+
+<p>If the app's behavior ever changes in a way that affects this policy, the policy is updated in the same release, and the effective date at the top changes with it. Because the policy is included in the app itself, the version you are reading always describes the version of the app you are running.</p>
+
+<h2>Contact</h2>
+
+<p>Questions about this policy or about how Sanitize handles data can be sent through TestFlight's <strong>Send Beta Feedback</strong>, which reaches the developer directly.</p>
+
+<footer><a href="../support/">Sanitize support</a> · <a href="../../">All apps</a></footer>
+</main>
+</body>
+</html>

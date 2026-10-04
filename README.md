@@ -9,6 +9,7 @@ at [gagehansberry.github.io](https://gagehansberry.github.io).
 | --- | --- | --- |
 | Cream | [cream/privacy](https://gagehansberry.github.io/cream/privacy/) | [cream/support](https://gagehansberry.github.io/cream/support/) |
 | Clicker | [tv-remote/privacy](https://gagehansberry.github.io/tv-remote/privacy/) | [tv-remote/support](https://gagehansberry.github.io/tv-remote/support/) |
+| Sanitize | [clean-share/privacy](https://gagehansberry.github.io/clean-share/privacy/) | [clean-share/support](https://gagehansberry.github.io/clean-share/support/) |
 
 ## Structure
 
