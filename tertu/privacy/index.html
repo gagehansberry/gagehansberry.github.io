@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tertu Privacy Policy</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+<h1>Tertu Privacy Policy</h1>
+<p class="meta">Effective October 19, 2026</p>
+
+<div class="summary">
+<p><strong>Tertu is a private app for friends, and what you say in it is end-to-end encrypted.</strong> Messages, photos, videos, voice messages, calls, names, profiles, groups and events are encrypted on your device before they leave it, and only the people in the conversation can decrypt them. Tertu's server passes them along but cannot read them. Tertu never asks for your phone number, email address or contacts, and it has no ads, no analytics, no tracking, and sells nothing about you. To deliver messages, the server does need to know some things, such as which devices are in which conversation and when they send. This policy lists all of it.</p>
+</div>
+
+<h2>How Tertu works</h2>
+<p>Tertu has its own server, called the relay, operated by the developer. Your devices send encrypted messages to the relay, and the relay holds them until the other people's devices pick them up. Encryption uses Messaging Layer Security (MLS, RFC 9420), an open standard for end-to-end encrypted group messaging. The keys that decrypt your conversations are made on your devices and never reach the relay.</p>
+<p>A Tertu account is not tied to a phone number, an email address or your Apple Account, and Tertu does not use Sign in with Apple. When you join with an invite from a friend, your device makes a key of its own, and the relay gives your account and device random identifiers. Your device signs in by proving it holds that key.</p>
+
+<h2>What stays on your devices</h2>
+<p>Your message history, the photos and other files you send and receive, your profile and the profiles of people you talk to, your settings and a search index of your messages are kept on your iPhone or Mac, in Tertu's own storage. On iPhone it is protected by iOS data protection, which encrypts it using your device passcode; on a Mac it relies on FileVault. Tertu keeps this folder out of iCloud Backup, computer backups and Time Machine, so restoring a device backup does not bring Tertu history back. Tertu's own encrypted backup (below) is the way to keep it.</p>
+<p>What you send is also kept on the devices of the people you send it to, as with any messaging app. Your display name, profile photo, bio and anything else on your profile go only to the people you share a conversation with, end-to-end encrypted.</p>
+
+<h2>What the relay can read</h2>
+<p>To deliver messages and keep accounts working, the relay holds the following. None of it includes a name, phone number, email address or any message content.</p>
+<ul>
+<li><strong>Account and device identifiers:</strong> the random account ID and device IDs it issued, each device's public sign-in key, your account's public key, and when each device was added or removed.</li>
+<li><strong>Who is in which conversation:</strong> each conversation has a random ID, and the relay knows which devices belong to it and when that changes. It cannot read a group's name or anything said in it.</li>
+<li><strong>Delivery information:</strong> which device sent each message or file, when, how large it is, and which devices it is for. Taken together, this means the relay can tell who talks with whom, and when, even though it cannot read what was said.</li>
+<li><strong>Invites:</strong> which account's invite each account joined with, the number of invites each account has left, and invite codes, which are stored only in a scrambled (hashed) form that cannot be turned back into the code. Who invited whom is visible only to the developer on the server, and is used only to deal with abuse of invites.</li>
+<li><strong>Notifications:</strong> your device's Apple push notification token, if you allow notifications (see "Notifications").</li>
+<li><strong>Purchases:</strong> the record of a membership or gift purchase (see "Purchases").</li>
+<li><strong>Reports</strong> you choose to send (see "Reports and safety").</li>
+<li><strong>Event links</strong> you host, as opaque identifiers and counts (see "Event links and guests without Tertu").</li>
+<li><strong>Your IP address and the time of each request,</strong> which every server sees. The relay uses addresses only in memory, to limit abuse, and never writes them to its logs.</li>
+<li><strong>Accounts suspended for abuse:</strong> the time and the developer's reason, while the suspension lasts.</li>
+</ul>
+<p>The relay cannot read the content of messages, photos, videos, voice messages or calls; display names, profile photos or bios; group or channel names; events, plans, polls, lists or anything else you create; or the keys that would decrypt any of it.</p>
+
+<h2>What Tertu does not ask for</h2>
+<ul>
+<li>No phone number, email address or password, and no Sign in with Apple.</li>
+<li>No access to your contacts, and no uploading or matching of contacts. Invite a Friend opens the share sheet, and Tertu does not see whom you send the invite to.</li>
+<li>No location. Photos and videos are re-encoded on your device before sending, which removes location and other hidden details such as the camera's serial number.</li>
+<li>No access to your photo library. Choosing a photo uses the system photo picker, which gives Tertu only the pictures you pick.</li>
+</ul>
+
+<h2>Permissions on your device</h2>
+<ul>
+<li><strong>Camera,</strong> when you take a photo or video in a chat, or scan a code from a friend or your other device. Frames used for scanning are never stored or sent.</li>
+<li><strong>Microphone,</strong> when you join a call, record a voice message or record a video.</li>
+<li><strong>Face ID, Touch ID or your passcode,</strong> if you turn on the app lock, and when you approve a new device or turn backup off. The system only tells Tertu whether it succeeded; no biometric data reaches Tertu.</li>
+<li><strong>Notifications,</strong> asked for only when you choose a notification setting, set a reminder or tap Allow Notifications.</li>
+</ul>
+<p>Each permission is asked for when you first use the feature that needs it, never at launch.</p>
+
+<h2>How long the relay keeps things</h2>
+<ul>
+<li><strong>Messages waiting for delivery:</strong> until each recipient device has picked them up, and never more than 30 days.</li>
+<li><strong>Photos, videos, voice messages and other files:</strong> encrypted, until every recipient has fetched them, and never more than 30 days.</li>
+<li><strong>Sign-in sessions:</strong> 24 hours.</li>
+<li><strong>Linking a new device:</strong> the temporary link expires after 10 minutes. History copied from one of your devices to another passes through the relay encrypted and is deleted once picked up, within 24 hours at most.</li>
+<li><strong>Invite codes:</strong> until used, cancelled or expired, at most 7 days.</li>
+<li><strong>Push tokens:</strong> until you turn notifications off, the device is removed, the account is deleted, Apple reports the token is no longer valid, or 90 days pass without Tertu being opened on that device.</li>
+<li><strong>Reports:</strong> 90 days, or longer while needed for a report to the authorities (see "Reports and safety").</li>
+<li><strong>Server logs:</strong> 7 days. Logs record the kind of request, the result, how long it took and the device ID. They never contain message content, sign-in tokens, invite codes or anything you typed.</li>
+<li><strong>Backups of the server's database:</strong> one a day, the newest 14 kept, stored only on the server. So anything deleted from the relay can remain in these backups for up to 14 days. Encrypted files and history transfers are not included in them.</li>
+<li><strong>Everything else about your account:</strong> until you delete the account.</li>
+</ul>
+
+<h2>Notifications</h2>
+<p>If you allow notifications, the relay keeps your iPhone's Apple push token so it can wake the phone when a message arrives. The notification it sends through Apple's push service says only "New message", with no sender, conversation or text. Tertu on your iPhone then decrypts the message itself and shows what your settings allow. Apple learns only that a Tertu device received a notification at that time. You choose in Tertu whether notifications show message text and the sender's name. With the app lock on they show neither, and in a chat with disappearing messages they never show the text.</p>
+
+<h2>Calls</h2>
+<p>Audio calls go through a call server that the developer runs alongside the relay. Every piece of audio is encrypted on the speaker's device with keys that only the people in the group have, so the call server passes along audio it cannot hear. To connect a call, the call server does learn which device IDs joined which call, under a random room name it cannot link to a group; when and for how long; the devices' IP addresses, including addresses on your local network; and the size and timing of the audio packets, which shows roughly when someone is talking. It never learns a name, an account or which group the call belongs to. The relay keeps no record of calls. The call server is set not to log connections, so its logs, kept for 7 days, hold only warnings and errors.</p>
+
+<h2>Tertu's encrypted backup in iCloud</h2>
+<p>Tertu can back up your message history, photos and what it needs to recover your account to your own iCloud storage, in Tertu's private iCloud database under your Apple Account. Backup is on unless you choose not to back up when you set up Tertu or turn it off later in Devices &amp; Backup. Everything in the backup is encrypted on your device with a backup key kept in your iCloud Keychain, which syncs between your own Apple devices. The developer cannot read the backup, and neither can Apple. Anyone who has your Apple Account and the passcode of one of your devices could restore it, which is why Tertu says so when you set it up.</p>
+<p>Messages with disappearing timers and view-once photos and videos are never backed up. Turning backup off deletes the backup from iCloud. For recovery, the relay keeps your account's public key and the time an account was last recovered.</p>
+
+<h2>Reports and safety</h2>
+<p>You can report messages, posts and replies, and a group's photo or background. A report is the one way readable content reaches the developer, and it only happens when you choose to send one. Before it is sent, Tertu shows what it will send:</p>
+<ul>
+<li>the text of the reported message and up to 19 text messages before it in that conversation, from anyone in it, including you;</li>
+<li>the reason you choose and any note you add;</li>
+<li>your account ID, the reported account's ID and the conversation's random ID.</li>
+</ul>
+<p>Photos, videos and voice messages are never included in a report. Reports are read only by the developer, on the server, and are never written to logs. They are kept for 90 days. If a report shows apparent child sexual exploitation, the developer reports it to the National Center for Missing &amp; Exploited Children's CyberTipline, as US law requires (18 U.S.C. § 2258A), and keeps that report for as long as needed for that purpose. A report stays for its retention period even if either account is deleted, so deleting an account cannot erase a report.</p>
+<p>Blocking someone happens only on your device. The relay is not told whom you block.</p>
+
+<h2>Event links and guests without Tertu</h2>
+<p>A host can invite people who don't have Tertu to an event with a link. This section is for those guests as well as for hosts.</p>
+<ul>
+<li><strong>The invitation.</strong> The event's title, time, general area and the host's name are encrypted. The key is in the part of the link after the "#", which browsers never send to any server, so only someone with the link can read the invitation.</li>
+<li><strong>Your answer.</strong> The page asks for a first name or nickname, whether you're going, any guests you're bringing and the host's questions. It never asks for a surname, email address or phone number. Your answer is encrypted in your browser so that only the hosts can read it. The page keeps a key for your answer in your browser's storage, so it can show you the host's reply later. It sets no cookies and loads nothing from anywhere else.</li>
+<li><strong>The host's reply.</strong> If the host accepts you, your browser receives the exact address and any notes, encrypted so that only your browser can read them. The guest list is never sent to a browser.</li>
+<li><strong>Who sees your nickname.</strong> The hosts see your answer. If the event shows its guest list to guests, people in the event's chat in Tertu see your nickname and answer in that list.</li>
+<li><strong>What the relay learns.</strong> That an event with links exists, which account created it, how many links and answers it has, and when they arrived. It cannot read the invitation, any answer or the host's decision. Like any web server, it and Cloudflare (below) see the IP address and time of each request from your browser. The relay never writes IP addresses to its logs, and its logs name no event, link or answer.</li>
+<li><strong>How long it lasts.</strong> An event's link data is deleted when the event's link period ends (at most 400 days), when the host deletes the event or its links, or when the host's account is deleted.</li>
+<li><strong>A limit worth knowing.</strong> The event page's code is served by Tertu's relay. Someone who controlled the relay could change that code and read what a browser types into it. The Tertu app does not rely on the relay in this way.</li>
+</ul>
+
+<h2>Event passes</h2>
+<p>A host can offer an accepted guest an event pass: a temporary Tertu account that can join the chats of the events it was invited to, and message people it shares an event with, but nothing else. Like any account, it has no name, email address or phone number on the relay. The relay records that it is an event pass, which events it may join, the host who offered it, and when it ends. A pass lasts until 7 days after its latest event, then becomes read-only, and the account is deleted from the relay 30 days after that, exactly as if it had been deleted in the app. You can delete it yourself at any time. A pass has no iCloud backup. If you become a member, the pass becomes an ordinary account with the same identity.</p>
+
+<h2>Purchases</h2>
+<p>All payments are made through Apple's In-App Purchase, under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. Apple handles the payment, and Tertu never receives your Apple Account, name, email address or payment details.</p>
+<ul>
+<li><strong>Membership</strong> is a one-time purchase. When you buy or restore it, the app sends Apple's signed record of the purchase to the relay, which checks it and keeps only Apple's original transaction ID against your account, with the product, whether it was a test or real purchase, the time of purchase and the time it was checked. Restoring the purchase on another Tertu account moves it there. The record is deleted with your account.</li>
+<li><strong>A gift of membership</strong> is its own purchase. The relay keeps the same kind of record against the buyer's account, a hashed form of the gift code (never the code itself), and when and by which account it was redeemed. It is kept as the record of the purchase; if the buyer's or redeemer's account is deleted, the link to that account is removed.</li>
+<li><strong>Refunds.</strong> Apple can tell the relay when a purchase is refunded, so that the membership or gift it paid for can be updated. These notices carry Apple's record of the transaction and nothing that identifies you.</li>
+<li><strong>Tips</strong> in the Tip Jar are optional and unlock nothing. Tertu keeps no record of a tip and sends nothing about it to the relay.</li>
+</ul>
+<p>Apple gives the developer sales reports that do not identify you.</p>
+
+<h2>Who else is involved</h2>
+<ul>
+<li><strong>Cloudflare</strong> carries connections between your devices and the relay, and protects the relay from attacks. Because the secure connection passes through Cloudflare, it can see IP addresses, the time and size of each request, which part of the relay a request is for (including some of the random IDs above), devices' temporary sign-in tokens, and the text of reports while they are sent. It cannot read messages or anything else that is end-to-end encrypted. Cloudflare keeps its own logs under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</li>
+<li><strong>Apple</strong> delivers notifications, stores the iCloud backup you choose to keep, and handles purchases, under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
+</ul>
+<p>The relay and the call server are operated by the developer in the United States. Tertu contains no advertising, analytics or crash-reporting code, and no third-party code that reports on you.</p>
+
+<h2>No ads, analytics or tracking</h2>
+<p>Tertu shows no ads, does not track you across apps or websites, and has no analytics. The developer does not sell or share information about you, and uses what the relay holds only to run Tertu and to keep it safe from abuse.</p>
+
+<h2>Deleting your account</h2>
+<p>Settings → Delete Account. After you type DELETE to confirm, Tertu leaves your conversations, then the relay deletes your account and everything tied to it: your devices and their keys, sign-in sessions, messages waiting for you, unused invite codes, push tokens, your membership record and any event links you host. Tertu then erases its data on that device, its keys in your Keychain, and your iCloud backup and backup key. It cannot be undone.</p>
+<p>Some things remain, for a limited time or with other people:</p>
+<ul>
+<li>Messages and files you already sent stay on the devices of the people you sent them to. Those still waiting to be picked up stay until they are, at most 30 days.</li>
+<li>Reports you sent, or reports about you, stay until their retention ends (see "Reports and safety").</li>
+<li>Gift purchase records stay, without the link to your account.</li>
+<li>Server logs are deleted within 7 days, and server backups within 14 days.</li>
+</ul>
+<p>To remove just one device, such as a lost Mac, use Settings → Devices &amp; Backup on another of your devices.</p>
+
+<h2>Security</h2>
+<p>End-to-end encryption means the developer cannot read your conversations, and neither can anyone who gets into the relay. Tertu's keys stay on your devices, protected by the Keychain and your device's data protection. They are shared only with your own devices when you link one, and the backup key is the only one that syncs, through iCloud Keychain. Safety numbers let you check, by comparing a number in person, that you are talking to the right person. Even so, no system is perfect. Anyone you send something to can screenshot, copy or keep it, and disappearing and view-once messages cannot prevent that.</p>
+
+<h2>Age</h2>
+<p>Tertu is for adults 18 and over. It is not directed at children, and the developer does not knowingly collect information from children. If you believe a child is using Tertu, please report the account in the app or email the address below.</p>
+
+<h2>Beta testing through TestFlight</h2>
+<p>If you are testing Tertu through Apple's TestFlight, Apple may share crash reports and any feedback or screenshots you choose to send with the developer, as described in Apple's TestFlight terms. That comes from Apple, not from the app. A screenshot may show messages, so only send what you mean to.</p>
+
+<h2>Your rights</h2>
+<p>Privacy laws such as the California Consumer Privacy Act give you rights to know about, correct and delete the personal information a business holds about you. Because the relay holds no name, email address or phone number, the most reliable way to delete what it holds is Delete Account in the app. For anything else, email the address below.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the new version will be posted on this page with a new effective date. If Tertu ever begins sending a new kind of information off your device, or to someone new, this policy will say exactly what, to whom and why before that version of the app is released.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:dev.gagehansberry@protonmail.com">dev.gagehansberry@protonmail.com</a>. If you are testing Tertu through TestFlight, you can also open the TestFlight app, choose Tertu, and tap Send Beta Feedback.</p>
+
+<footer><a href="../support/">Tertu support</a> · <a href="../../">All apps</a></footer>
+</main>
+</body>
+</html>
