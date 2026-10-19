@@ -9,14 +9,19 @@
 <body>
 <main>
 <h1>Clicker Privacy Policy</h1>
-<p class="meta">Effective October 6, 2026</p>
+<p class="meta">Effective October 18, 2026</p>
 
 <div class="summary">
 <p><strong>Clicker does not collect any data.</strong> It is a remote control for your TV, and it only talks to devices on your own home network. The app has no accounts, no servers, no analytics, no advertising and no tracking. Nothing it handles is sent to the developer or to anyone else.</p>
 </div>
 
 <h2>What Clicker connects to</h2>
-<p>Clicker asks for permission to use your local network, because that is how it reaches your TV. To find TVs, it lists the devices on your network that support AirPlay, by the names they announce. That list is only shown while you choose a TV and isn't saved. Clicker connects to:</p>
+<p>Clicker asks for permission to use your local network, because that is how it reaches your TV. To find TVs, Clicker looks in two ways while you're choosing one:</p>
+<ul>
+<li>It lists the devices on your network that support AirPlay, by the names they announce.</li>
+<li>It checks each address on your Wi‑Fi network for a webOS TV, so TVs without AirPlay are found too. For each address it tries the port a webOS TV uses for remote control. If that port answers, Clicker sends a short greeting, which a webOS TV answers by saying it is a TV, with an identifier, without showing anything on screen. Other devices are only checked for that one port; Clicker sends them nothing else and keeps nothing about them. It only checks addresses on your own home network, never on mobile data, a VPN or the internet.</li>
+</ul>
+<p>The list of TVs found is only shown while you choose a TV and isn't saved. Clicker connects to:</p>
 <ul>
 <li><strong>Your TV.</strong> The first time you connect, your TV shows a prompt asking whether to allow Clicker. Nothing is controlled until you accept it on the TV, and you can remove the permission from the TV later. Clicker sends the buttons you press and the text you type, and receives what it needs to show the remote, such as the volume, the current app and the icons of the TV's apps. When the TV supports it, the connection is encrypted and Clicker checks that it is talking to the same TV it paired with. If your TV doesn't support an encrypted connection, Clicker uses the TV's unencrypted one, which stays on your home network.</li>
 <li><strong>Turning the TV on.</strong> To switch the TV on, Clicker sends a standard "wake" signal to the TV's address on your home network.</li>
@@ -27,7 +32,7 @@
 <h2>What Clicker keeps on your iPhone</h2>
 <p>To work, Clicker stores a few things in the app's own private storage on your iPhone:</p>
 <ul>
-<li><strong>Your TVs:</strong> each TV's name, its address on your home network, the hardware address used to turn it on, the apps you pin, and when you last connected.</li>
+<li><strong>Your TVs:</strong> each TV's name, its address on your home network, the identifier the TV reported when Clicker found it (so Clicker can find it again if its address changes), the hardware address used to turn it on, the apps you pin, and when you last connected.</li>
 <li><strong>The pairing key</strong> your TV issued, and a fingerprint of the TV's certificate. These are kept in the iPhone's Keychain, can only be read while your iPhone is unlocked, and never move to another device, even when you restore a backup onto a new iPhone.</li>
 <li><strong>Icons of your TV's apps,</strong> copied from the TV so the remote can show them.</li>
 <li><strong>Your Sonos speaker's</strong> name and address on your home network, if you set one up.</li>
