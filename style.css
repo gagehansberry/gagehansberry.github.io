@@ -47,3 +47,12 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule);
 .app .meta { margin: 0; }
 .app .links { margin: 0; font-size: .95rem; }
 .app.featured { border-color: var(--accent); }
+
+/* A card with a page: the heading link covers the whole card, and the
+   policy links sit above it so they still work on their own. */
+.app { position: relative; transition: border-color .15s, box-shadow .15s; }
+.app h2 a::after { content: ""; position: absolute; inset: 0; border-radius: 18px; }
+.app .links a { position: relative; z-index: 1; }
+.app:has(h2 a):hover { box-shadow: 0 4px 18px rgba(0, 0, 0, .08); }
+.app h2 a:focus-visible { outline: none; }
+.app:has(h2 a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
