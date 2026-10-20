@@ -7,7 +7,7 @@ at [gagehansberry.github.io](https://gagehansberry.github.io).
 
 | App | Privacy policy | Support |
 | --- | --- | --- |
-| Cream | [cream/privacy](https://gagehansberry.github.io/cream/privacy/) | [cream/support](https://gagehansberry.github.io/cream/support/) |
+| Cream ([product page](https://gagehansberry.github.io/cream/)) | [cream/privacy](https://gagehansberry.github.io/cream/privacy/) | [cream/support](https://gagehansberry.github.io/cream/support/) |
 | Clicker | [tv-remote/privacy](https://gagehansberry.github.io/tv-remote/privacy/) | [tv-remote/support](https://gagehansberry.github.io/tv-remote/support/) |
 | Sanitize | [clean-share/privacy](https://gagehansberry.github.io/clean-share/privacy/) | [clean-share/support](https://gagehansberry.github.io/clean-share/support/) |
 | Tertu | [tertu/privacy](https://gagehansberry.github.io/tertu/privacy/) | [tertu/support](https://gagehansberry.github.io/tertu/support/) |
@@ -17,9 +17,14 @@ at [gagehansberry.github.io](https://gagehansberry.github.io).
 ```
 index.html            home page: what these apps are, and links to each
 style.css             shared styles (light and dark)
+assets/icons/         app icons for the home page
 <app>/privacy/        the app's privacy policy
 <app>/support/        the app's support page
+cream/                Cream's product page (index.html, cream.css, cream.js, assets/)
 ```
+
+The pages load nothing from other sites: no analytics, cookies, web fonts or
+third-party scripts.
 
 A folder is named for what the app does, not its display name, when the name
 may still change: `tv-remote/` is Clicker's. Apps link to these URLs from inside

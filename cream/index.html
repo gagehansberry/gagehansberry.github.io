@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cream: Envelope Budget Planner</title>
+<meta name="description" content="Envelope budgeting for iPhone and iPad. Split your paycheck into envelopes and see exactly what you can spend today. No account, no bank login, no ads.">
+<meta name="theme-color" content="#f7f2e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07110f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cream: Envelope Budget Planner">
+<meta property="og:description" content="Split your paycheck into envelopes and see exactly what you can spend today. No account. No bank login. No ads.">
+<meta property="og:url" content="https://gagehansberry.github.io/cream/">
+<meta property="og:image" content="https://gagehansberry.github.io/cream/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="cream.css">
+<script src="cream.js" defer></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-512.png" alt="">Cream</a>
+    <nav aria-label="Page">
+      <ul>
+        <li class="optional"><a href="#try">Try it</a></li>
+        <li class="optional"><a href="#features">Features</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="support/">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="rings" aria-hidden="true">
+    <svg width="760" height="760" viewBox="0 0 100 100" style="right:-260px;top:-220px"><circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="9"/></svg>
+    <svg width="520" height="520" viewBox="0 0 100 100" style="left:-240px;bottom:-200px"><circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="9"/></svg>
+  </div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Envelope budgeting for iPhone and iPad</p>
+      <h1>Budget with envelopes. <span>Know what you can spend today.</span></h1>
+      <p class="lead">Split your paycheck into envelopes, log what you spend, and check one number each day: what's left to spend. Your bills are already set aside.</p>
+      <div class="cta">
+        <span class="pill solid">Coming soon to the App Store</span>
+        <a class="pill ghost" href="#try">Try the daily number ↓</a>
+      </div>
+      <ul class="trust">
+        <li>No account</li>
+        <li>No bank login</li>
+        <li>No ads</li>
+      </ul>
+    </div>
+    <div class="hero-video">
+      <video src="assets/preview.mp4" poster="assets/preview-poster.jpg" autoplay muted loop playsinline preload="metadata" width="590" height="1280"
+        aria-label="Cream in use: Budgets, category history, upcoming bills, the retirement calculator and net worth"></video>
+    </div>
+  </div>
+</section>
+
+<section id="try" class="alt">
+  <div class="wrap center">
+    <p class="eyebrow reveal">Try it right here</p>
+    <h2 class="reveal">What can you spend today?</h2>
+    <p class="lead reveal">This is the number Cream keeps for you. Change anything and watch it move. It all runs on this page; nothing you type is sent anywhere.</p>
+
+    <form id="demo" class="demo reveal" autocomplete="off">
+      <div class="inputs">
+        <div class="field">
+          <label for="income">Expected income this month</label>
+          <div class="money"><span>$</span><input id="income" inputmode="decimal" value="5200"></div>
+        </div>
+        <div class="field">
+          <label for="spent">Spent so far</label>
+          <div class="money"><span>$</span><input id="spent" inputmode="decimal" value="2435.09"></div>
+        </div>
+        <div class="field">
+          <label for="bills">Bills still due this month</label>
+          <div class="money"><span>$</span><input id="bills" inputmode="decimal" value="72.40"></div>
+        </div>
+        <div class="field">
+          <label for="days">Days left, counting today <output id="days-out" for="days"></output></label>
+          <input id="days" type="range" min="1" max="31" step="1" value="13">
+        </div>
+        <p class="note">Arithmetic only, not financial advice. In the app, bills come from your recurring list automatically.</p>
+      </div>
+      <div class="gauge-card" aria-live="polite">
+        <p class="per-day-label">Left to spend, per day</p>
+        <p class="per-day" id="per-day">$0.00</p>
+        <p class="explain" id="explain"></p>
+        <svg class="gauge" viewBox="0 0 300 175" role="img" aria-label="Budget remaining gauge">
+          <defs>
+            <linearGradient id="g-teal" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#5fa89b"/><stop offset="1" stop-color="#187a6b"/>
+            </linearGradient>
+          </defs>
+          <path d="M 35 150 A 115 115 0 0 1 265 150" fill="none" stroke="var(--track)" stroke-width="30" stroke-linecap="round"/>
+          <path id="arc-bills" class="arc" d="M 35 150 A 115 115 0 0 1 265 150" pathLength="100" fill="none" stroke="var(--mint)" stroke-width="30" stroke-linecap="round" stroke-dasharray="0 100"/>
+          <path id="arc-free" class="arc" d="M 35 150 A 115 115 0 0 1 265 150" pathLength="100" fill="none" stroke="url(#g-teal)" stroke-width="30" stroke-linecap="round" stroke-dasharray="0 100"/>
+          <text x="150" y="112" text-anchor="middle" class="small">Left</text>
+          <text id="g-left" x="150" y="138" text-anchor="middle" font-size="24" font-weight="800">$0.00</text>
+          <text id="g-of" x="150" y="158" text-anchor="middle" class="small"></text>
+        </svg>
+        <div class="legend"><span><i style="background:var(--teal)"></i>Free to spend</span><span><i style="background:var(--mint)"></i>Bills still due</span></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <p class="eyebrow reveal">Light &amp; dark</p>
+    <h2 class="reveal">Light or dark, it's all Cream.</h2>
+    <p class="lead reveal">Warm cream by day, deep teal-black by night. Drag to compare.</p>
+    <div class="compare reveal">
+      <img src="assets/budgets.webp" alt="Cream's Budgets screen in light mode" width="660" height="1434">
+      <img class="dark" src="assets/budgets-dark.webp" alt="The same screen in dark mode" width="660" height="1434">
+      <div class="handle" aria-hidden="true"></div>
+      <label class="sr-only" for="compare-range">Reveal dark mode</label>
+      <input id="compare-range" type="range" min="0" max="100" value="50">
+    </div>
+    <div class="compare-labels"><span>Light</span><span>Dark</span></div>
+  </div>
+</section>
+
+<section id="features" class="alt">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow reveal">Features</p>
+      <h2 class="reveal">Everything a budget needs. Nothing it doesn't.</h2>
+    </div>
+
+    <div class="feature">
+      <div class="copy reveal">
+        <p class="eyebrow">Envelopes</p>
+        <h3>Give your paycheck a plan.</h3>
+        <p>Set what you expect to earn, fill an envelope for each category, and Cream turns it into one daily number.</p>
+        <ul>
+          <li>Over in one envelope? Move money from another in one step</li>
+          <li>Bills still due are set aside before you see what's free</li>
+          <li>One gauge shows the whole month at a glance</li>
+        </ul>
+      </div>
+      <div class="reveal"><div class="phone"><img src="assets/budgets.webp" alt="Budgets screen with the per-day number and the gauge" width="660" height="1434" loading="lazy"><img class="callout" style="top:27%" src="assets/callout-budgets.webp" alt="" loading="lazy"></div></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="copy reveal">
+        <p class="eyebrow">Bills</p>
+        <h3>See every bill before it's due.</h3>
+        <p>Rent, phone, streaming: add them once and they show up ahead of time, then add themselves on the day.</p>
+        <ul>
+          <li>Log spending in a few taps, or just tell Siri</li>
+          <li>Split a purchase across envelopes</li>
+          <li>Search by name, category or amount</li>
+        </ul>
+      </div>
+      <div class="reveal"><div class="phone"><img src="assets/transactions.webp" alt="Transactions with upcoming bills marked Pending" width="660" height="1434" loading="lazy"></div></div>
+    </div>
+
+    <div class="feature">
+      <div class="copy reveal">
+        <p class="eyebrow">Insights</p>
+        <h3>See where your money goes.</h3>
+        <p>When you spent, where it went, what cost the most, and how this month compares with last month by this day.</p>
+        <ul>
+          <li>Every envelope, month after month</li>
+          <li>Recurring bills kept apart from everyday spending</li>
+        </ul>
+      </div>
+      <div class="reveal"><div class="phone"><img src="assets/category.webp" alt="One category's spending by day and over past months" width="660" height="1434" loading="lazy"><img class="callout" style="top:74%" src="assets/callout-category.webp" alt="" loading="lazy"></div></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="copy reveal">
+        <p class="eyebrow">More than a budget</p>
+        <h3>Net worth and retirement, on your numbers.</h3>
+        <p>Track your balances over time, and see how your savings hold up across a thousand simulated retirements. Mortgage, debt payoff, interest, savings goal and split-the-bill calculators too.</p>
+      </div>
+      <div class="reveal pair">
+        <div class="phone"><img src="assets/networth.webp" alt="Net Worth with a rising line" width="660" height="1434" loading="lazy"></div>
+        <div class="phone"><img src="assets/willitlast.webp" alt="Will It Last? retirement calculator" width="660" height="1434" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap center">
+    <p class="eyebrow reveal">Private by design</p>
+    <h2 class="reveal">What Cream doesn't do.</h2>
+    <ul class="nots">
+      <li><span>Ask for your bank login</span></li>
+      <li><span>Make you create an account</span></li>
+      <li><span>Show you ads</span></li>
+      <li><span>Track what you do</span></li>
+      <li><span>Send your numbers to us</span></li>
+    </ul>
+    <div class="does">
+      <div class="reveal"><h3>On your device</h3><p>Your budget lives on your iPhone or iPad, protected by your passcode.</p></div>
+      <div class="reveal"><h3>Your iCloud, if you want</h3><p>Turn on iCloud sync and your devices stay the same, through your own private iCloud. It's off until you turn it on.</p></div>
+      <div class="reveal"><h3>Yours to take</h3><p>Export everything to a file whenever you like. Nothing you enter is ever locked away.</p></div>
+    </div>
+    <p class="note" style="margin-top:28px">Read the full <a href="privacy/">privacy policy</a>.</p>
+  </div>
+</section>
+
+<section id="pricing" class="alt">
+  <div class="wrap center">
+    <p class="eyebrow reveal">Pricing</p>
+    <h2 class="reveal">Free to start. Plus is yours to keep.</h2>
+    <p class="lead reveal">No subscription. Try every Cream Plus feature free for 45 days, then buy it once if you want it.</p>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Cream</h3>
+        <p class="price">Free</p>
+        <p class="sub">Always</p>
+        <ul>
+          <li>Transactions: add, edit, split and search</li>
+          <li>Categories, Siri and Spotlight</li>
+          <li>iCloud sync between your devices</li>
+          <li>Export and import</li>
+        </ul>
+      </div>
+      <div class="plan plus reveal">
+        <h3>Cream Plus</h3>
+        <p class="price">$9.99 once</p>
+        <p class="sub">Free for 45 days · Shared with Family Sharing</p>
+        <ul>
+          <li>Envelope budgets and your daily spending number</li>
+          <li>Spending Insights and envelope history</li>
+          <li>Recurring bills and paychecks</li>
+          <li>Every calculator, including retirement</li>
+          <li>Net Worth</li>
+          <li>Quick Add and Ask, with Apple Intelligence</li>
+          <li>Add transactions from a screenshot</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:18px">US price. Skip Plus and your transactions stay free, and everything you entered stays yours to read and export.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <h2 class="reveal">Questions</h2>
+    <div class="faq">
+      <details><summary>Does Cream connect to my bank?</summary><p>No. You type in or import what you spend, and Cream never asks for a bank login or account number. It can read a screenshot of your bank's app and put the purchases on a list for you to check first.</p></details>
+      <details><summary>What happens when the free trial ends?</summary><p>Adding and changing transactions stays free, and everything you entered stays to read and export. Budgets show where things stood the day the trial ended, and recurring bills pause until you buy Plus, when any missed ones are added.</p></details>
+      <details><summary>Does it work on iPad?</summary><p>Yes, on iPhone and iPad. With iCloud sync on, both stay the same.</p></details>
+      <details><summary>Is this financial advice?</summary><p>No. Cream does arithmetic on the numbers you give it. It doesn't recommend products, move money, or tell you what to do.</p></details>
+    </div>
+    <p class="note" style="margin-top:20px">More answers on the <a href="support/">support page</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="privacy/">Privacy policy</a><a href="support/">Support</a><a href="../">All apps</a></nav>
+    <p>This page doesn't track you either: no cookies, no analytics, nothing loaded from anywhere else.</p>
+  </div>
+</footer>
+
+</body>
+</html>
